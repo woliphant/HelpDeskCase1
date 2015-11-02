@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="Content/bootstrap.css" rel="stylesheet"/>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:#42426F; color:#fff;">
+        <div class="navbar-header" style="background-color:#42426F; color:#fff;">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Helpdesk Case #1</a>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav" id="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="employees.html">Employee</a></li>
+                <li><a href="department.html">Department</a></li>
+                <li><a href="problem.html">Problem</a></li>
+                <li><a href="util.html">Util</a></li>
+            </ul>
+            <ul class="nav pull-right" style="padding-right:20px;padding-top:10px;color:white;font-weight:bolder">
+                <li>v1.0</li>
+            </ul>
+        </div>
+    </nav>
+    <div class="panel-heading text-center text-capitalize" style="margin-top: 50px;">
+        <h1>employees</h1>
+    </div>
+    <div>
+        <img src="Images/logo.png" alt="Helpdesk Logo" class="img-responsive center-block" style="width: 400px; height: 300px; margin: 0 auto;"/>
+    </div>
+        <div class="col-xs-4">&nbsp;</div>
+        <div class="panel-group col-sm-4 col-xs-8" style="z-index: 100; border-style: solid; border-width: 1px; padding-left: 10px; padding-top: 10px; padding-right: 10px; margin-top: 50px; background-color:#42426F; border-radius: 20px 20px 20px 20px;">
+            <div class="panel panel-black" style="border: none;  background-color:#42426F; color:#fff;">
+                <div class="panel-heading xsmall row">
+                    <div class="col-xs-4">Title</div>
+                    <div class="col-xs-4">First Name</div>
+                    <div class="col-xs-4" style="padding-left:6%;">Surname</div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel panel-primary" style="height: 100px; overflow-y: auto; overflow-x:hidden; border: none; ">
+                    <div id="main"></div>
+                </div>
+            </div>
+            <div class="panel-footer" style="background-color:#42426F;">
+                <div class="col-xs-10" id="LabelStatus" style=" margin-left: auto; margin-right: auto; float: none; background-color:#42426F; color:#fff; font-family:sans-serif, Verdana, serif; "></div>
+            </div>
+        </div>
+          
+    <div class="modal fade text-center" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#42426F; color:#fff;">
+                    <button type="button" class="close" data-dissmiss="myModal">X</button>
+                    <h1>Employee Information</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-4">Title:</div>
+                        <div class="col-xs-8"><input type="text" placeholder="enter title" id="TextBoxTitle" class="form-control" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4">First:</div>
+                        <div class="col-xs-8"><input type="text" placeholder="enter first name" id="TextBoxFirstname" class="form-control" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4">Surname:</div>
+                        <div class="col-xs-8"><input type="text" placeholder="enter last name" id="TextBoxLastname" class="form-control" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4">Phone#:</div>
+                        <div class="col-xs-8"><input type="text" placeholder="enter phone" id="TextBoxPhone" class="form-control" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4">Email:</div>
+                        <div class="col-xs-8"><input type="text" placeholder="enter email" id="TextBoxEmail" class="form-control" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4">Department:</div>
+                        <div class="col-xs-8">
+                            <select id="ddlDepts" name="ddlDepts" class="form-control"></select>
+                        </div>
+                    </div>
+                    <input type="hidden" id="HiddenEntity" />
+                    <input type="hidden" id="HiddenId" />
+                </div>
+                <div class="modal-footer">
+                    <div class="col-xs-12">
+                        <input type="button" id="ButtonAction" />
+                        <input type="button" id="ButtonDelete" />
+                    </div>
+                    <div class="col-xs-12" id="ModalStatus" style="padding-top:10px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/employee.js"></script>
+</body>
+</html>
